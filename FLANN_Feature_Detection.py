@@ -32,6 +32,7 @@ draw_params = dict(matchColor = (0,255,0),
                    flags = cv.DrawMatchesFlags_DEFAULT)
 img3 = cv.drawMatchesKnn(img1,kp1,img2,kp2,matches,None,**draw_params)
 imshow(img3,)
-cv.imwrite('output.ppm',img3)
+cv.imwrite('output_FLANN.ppm',img3)
+cv.imwrite('jpg/output_FLANN.jpg',img3)
 
 show()
